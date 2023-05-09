@@ -1,5 +1,21 @@
 <!-- 
-    
+<_--------------Home Work---------------
+
+
+
+ Ekta Form thakbe ,
+ input nibo 2 ta number ,
+ 
+
+
+
+
+
+
+
+
+
+<_-------------------------------------------
 ######class = Template or blue print of. can be called user defined data type.
 object = instance of a class 
 PHP data types are used to hold different types of data or values. PHP supports 8 primitive data types that can be categorized further in 3 types:
@@ -43,33 +59,6 @@ Data security, reuse korte pari,
 -->
 
 <?php 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -139,7 +128,7 @@ echo "<h1> Summation is = ".$obj->sum()."</h1>";
 echo "<h1> Subtraction is = ".$obj->sub()."</h1>";
 echo "<h1> Multiplication is = ".$obj->mul()."</h1>";
 echo "<h1> Division is = ".$obj->div()."</h1>";
-echo "<h1> Result is = ".$obj->result()."</h1>";
+echo "<h1> Result is => ".$obj->result()."</h1>";
 
 
 
