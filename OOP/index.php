@@ -57,7 +57,31 @@ Data security, reuse korte pari,
 
 
 -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1 OOP</title>
+    <style>
+    a {
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        padding: 10px;
+        margin-top: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <center><a href="hw.php">Home Work</a></center>
+</body>
+
+</html>
 <?php 
 
 
@@ -129,15 +153,3 @@ echo "<h1> Subtraction is = ".$obj->sub()."</h1>";
 echo "<h1> Multiplication is = ".$obj->mul()."</h1>";
 echo "<h1> Division is = ".$obj->div()."</h1>";
 echo "<h1> Result is => ".$obj->result()."</h1>";
-
-
-
-
-
-
-
-
-
-
-
-
