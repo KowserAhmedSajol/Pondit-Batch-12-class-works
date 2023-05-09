@@ -1,0 +1,186 @@
+<?php
+
+$menu_items = array(
+    array(
+        'title' => 'Patient Entry',
+        'icon' => "icon-user-plus",
+        'link' => "patient-list.php",
+		'id' => '2'
+    ), 
+    array(
+        'title' => 'Bed Allotment',
+        'icon' => "icon-enter",
+        'link' => "back-index.php",
+		'id' => '3'
+    ),
+    array(
+        'title' => 'Medical Test',
+        'icon' => "icon-lab",
+        'link' => "blood-test-admin.php",
+		'id' => '4'
+    ),
+    array(
+        'title' => 'Test Report',
+        'icon' => "icon-files-empty",
+        'link' => "test-report-list.php",
+		'id' => '5'
+    ),
+    array(
+        'title' => 'Doctor Category',
+        'icon' => "icon-user-tie",
+        'link' => "doctor-profile-admin.php",
+		'id' => '6'
+    ),
+    array(
+        'title' => 'Appointemnt',
+        'icon' => "icon-calendar3",
+        'link' => "appointment-list.php",
+		'id' => '7'
+    ),
+    array(
+        'title' => 'Ambulence',
+        'icon' => "icon-truck",
+        'link' => "ambulence-req-check.php",
+		'id' => '8'
+    )
+    );
+
+    $sub_menus = array(
+        array(
+            'title' => 'Blood Test',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Urine Test',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'X-Ray',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Endoscopy',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Biopsy',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Genetic Test',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Ultrasound Test',
+            'link' => "blood-test-admin.php",
+			'for' => '4'
+        ),
+        array(
+            'title' => 'Upload Test Report',
+            'link' => "blood-test-admin.php",
+			'for' => '5'
+        ),
+        array(
+            'title' => 'See All Test Reports',
+            'link' => "blood-test-admin.php",
+			'for' => '5'
+        ),
+        array(
+            'title' => 'Emergency physicians',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Psychiatrists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Gynecologists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Neurologists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Radiologists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Anesthesiologists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Cardiologists',
+            'link' => "blood-test-admin.php",
+			'for' => '6'
+        ),
+        array(
+            'title' => 'Ambulence Management',
+            'link' => "blood-test-admin.php",
+			'for' => '8'
+        ),
+        array(
+            'title' => 'Ambulence Request',
+            'link' => "blood-test-admin.php",
+			'for' => '8'
+        )
+
+    );
+
+?>
+<!-- Main navigation -->
+<div class="card card-sidebar-mobile">
+    <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+        <!-- Main -->
+        <li class="nav-item-header">
+            <div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i>
+        </li>
+        <li class="nav-item">
+							<a href="back-index.php" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+						</li>
+        <?php
+			foreach($menu_items as $key=>$menu_item)
+				{
+			?>
+            <li class="nav-item nav-item-submenu">
+            <a href="<?=$menu_item['link']?>" class="nav-link ">
+                <i class="<?=$menu_item['icon']?>"></i>
+                <span>
+                    <?=$menu_item['title']?>
+                </span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="test components">
+                <?php foreach($sub_menus as $sub_key=>$sub_menu){
+												if($sub_menu['for'] == $menu_item['id'] ){
+												?>
+                <li class="nav-item"><a href="<?=$sub_menu['link']?>" class="nav-link"><?=$sub_menu['title']?></a></li>
+                <?php
+				}
+			} 
+			?>
+            </ul>
+        </li>
+        <?php
+		}
+		?>
+    </ul>
+</div>
+<!-- /main navigation -->
