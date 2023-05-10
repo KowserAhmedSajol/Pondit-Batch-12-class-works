@@ -1,9 +1,9 @@
 <?php 
 if(isset($_POST['submit'])){
     
+    
     $inputNumber1 = intval($_POST["number1"]);
     $inputNumber2 = intval($_POST["number2"]);
-   
 
 
 
@@ -56,17 +56,7 @@ if(isset($_POST['submit'])){
     // echo "Number two is = ".$obj->num2;
 
 
-
-
-
-
-
-
-
-
-
 }
-
 
 ?>
 
@@ -80,6 +70,24 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeWork User Input</title>
+    <style>
+        .button {
+            padding: 15px 30px;
+            background-color: #0099cc;
+            border:none;
+            color: white;
+            border-radius: 20px;
+            font-size: 16px;
+            transition: 1s;
+        }
+        .button:hover {
+            border-radius: 0px;
+            padding: 18px 35px;
+            font-size: 18px;
+            color: #8cff1a;
+            background-color: #3d0066;
+        }
+    </style>
 </head>
 
 <body>
@@ -88,7 +96,7 @@ if(isset($_POST['submit'])){
         <input name="number1" type="text"><br>
         Input Second Number <br>
         <input name="number2" type="text"><br><br>
-        <input name="submit" type="submit" value="Submit">
+        <input class="button" name="submit" type="submit" value="Submit">
     </form>
 
 
